@@ -14,7 +14,8 @@ function App() {
 
   // Backend API base URL
   // const API_URL = 'http://localhost:5000/api/tasks';
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_BASE = process.env.REACT_APP_API_URL;
+  const API_URL = `${API_BASE}/api/tasks`;
   console.log('API_URL:', process.env.REACT_APP_API_URL);
 
   // Fetch tasks from backend when app loads
