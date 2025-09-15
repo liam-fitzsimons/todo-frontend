@@ -23,7 +23,7 @@ A modern, drag-and-drop enabled To-Do List built with React. This app supports C
 
 ## Demo
 
-(https://todo-frontend-theta-bice.vercel.app/)
+Demo: https://todo-frontend-theta-bice.vercel.app/
 
 ---
 
