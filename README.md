@@ -68,7 +68,19 @@ Demo: https://todo-frontend-theta-bice.vercel.app/
 
    ```bash
    npm install
-# or
-yarn install
-```
+   ```
 
+3. Create a .env file in the root directory and add your backend API URL:
+
+   ```bash
+   REACT_APP_API_URL=http://localhost:5000
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Start the development server:
+Open http://localhost:3000 in your browser to view the app.
