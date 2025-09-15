@@ -1,4 +1,4 @@
-# React To-Do List App
+# React To-Do List App (Frontend)
 
 A modern, drag-and-drop enabled To-Do List built with React. This app supports CRUD operations, task filtering, and syncing with a backend API.\
 \
