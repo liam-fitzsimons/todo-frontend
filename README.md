@@ -1,6 +1,7 @@
 # React To-Do List App
 
 A modern, drag-and-drop enabled To-Do List built with React. This app supports CRUD operations, task filtering, and syncing with a backend API.\
+\
 The backend for this project can be found here: https://github.com/liam-fitzsimons/todo-backend
 
 ---
