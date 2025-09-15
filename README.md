@@ -82,5 +82,49 @@ Demo: https://todo-frontend-theta-bice.vercel.app/
    npm start
    ```
 
-5. Start the development server:
-Open http://localhost:3000 in your browser to view the app.
+5. Open http://localhost:3000 in your browser to view the app.
+
+   
+## Environment Variables
+| Variable            | Description                 | Example                 |
+| ------------------- | --------------------------- | ----------------------- |
+| `REACT_APP_API_URL` | Base URL of the backend API | `http://localhost:5000` |
+
+## Usage
+- Add Task: Type a task in the input box and press Enter or click Add.
+- Edit Task: Double-click a task to edit it inline. Press Enter to save or Escape to cancel.
+- Delete Task: Click the red Delete button to remove a task.
+- Complete Task: Toggle the checkbox to mark a task as completed.
+- Filter: Use the buttons to filter tasks by All, Active, or Completed.
+- Reorder: Drag and drop tasks to reorder them.
+
+## API Endpoints (Backend)
+This frontend expects a backend API with the following RESTful endpoints:
+| Method | Endpoint         | Description       | Request Body       | Response            |
+| ------ | ---------------- | ----------------- | ------------------ | ------------------- |
+| GET    | `/api/tasks`     | Get all tasks     | None               | Array of tasks      |
+| POST   | `/api/tasks`     | Create a new task | `{ text: string }` | Created task object |
+| PUT    | `/api/tasks/:id` | Update a task     | `{ text: string }` | Updated task object |
+| DELETE | `/api/tasks/:id` | Delete a task     | None               | Status message      |
+
+## Task Object Schema
+{
+  "_id": "string",
+  "text": "string",
+  "completed": "boolean"
+}
+
+## Folder Structure
+your_repo_name/
+├── public/
+├── src/
+│   ├── App.jsx         # Main React component
+│   ├── index.js        # React entry point
+│   └── ...             # Other components/styles if any
+├── .env                # Environment variables
+├── package.json
+├── README.md
+└── ...
+
+## Licence
+This project is licensed under the MIT License.
