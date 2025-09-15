@@ -1,6 +1,6 @@
 # This is the front end for my to-do list app
 
-This is the React frontend for the To-Do List application. It provides the user interface and interacts with the backend API to manage tasks.   
+This is the React frontend for the To-Do List application. It provides the user interface and interacts with the backend API to manage tasks.\
 Use this link for a demo: https://todo-frontend-theta-bice.vercel.app/
 
 ## Available Scripts
