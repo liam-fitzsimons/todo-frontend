@@ -53,7 +53,7 @@ Demo: https://todo-frontend-theta-bice.vercel.app/
 ## Prerequisites
 
 - Node.js (v14+ recommended)
-- npm or yarn
+- npm 
 - Running backend API with endpoints for task management (see API Endpoints section)
 
 ---
