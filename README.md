@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# React To-Do List App (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, drag-and-drop enabled To-Do List built with React. This app supports CRUD operations, task filtering, and syncing with a backend API.\
+\
+The backend for this project can be found here: https://github.com/liam-fitzsimons/todo-backend
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Demo](#demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+Demo: https://todo-frontend-theta-bice.vercel.app/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Add new tasks
+- Edit existing tasks inline
+- Delete tasks
+- Mark tasks as completed
+- Filter tasks by All / Active / Completed
+- Reorder tasks via drag and drop
+- Sync tasks with a backend API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- React 18+
+- [@hello-pangea/dnd](https://github.com/hello-pangea/dnd) for drag-and-drop
+- Fetch API for backend communication
+- CSS-in-JS for inline styling
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Node.js (v14+ recommended)
+- npm 
+- Running backend API with endpoints for task management (see API Endpoints section)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   git clone https://github.com/your_username/your_repo_name.git
+   cd your_repo_name
+   ```
+2. Install dependencies:
 
-### Code Splitting
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Create a .env file in the root directory and add your backend API URL:
 
-### Analyzing the Bundle Size
+   ```bash
+   REACT_APP_API_URL=http://localhost:5000
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Start the development server:
 
-### Making a Progressive Web App
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. Open http://localhost:3000 in your browser to view the app.
 
-### Advanced Configuration
+   
+## Environment Variables
+| Variable            | Description                 | Example                 |
+| ------------------- | --------------------------- | ----------------------- |
+| `REACT_APP_API_URL` | Base URL of the backend API | `http://localhost:5000` |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
+- Add Task: Type a task in the input box and press Enter or click Add.
+- Edit Task: Double-click a task to edit it inline. Press Enter to save or Escape to cancel.
+- Delete Task: Click the red Delete button to remove a task.
+- Complete Task: Toggle the checkbox to mark a task as completed.
+- Filter: Use the buttons to filter tasks by All, Active, or Completed.
+- Reorder: Drag and drop tasks to reorder them.
 
-### Deployment
+## API Endpoints (Backend)
+This frontend expects a backend API with the following RESTful endpoints:
+| Method | Endpoint         | Description       | Request Body       | Response            |
+| ------ | ---------------- | ----------------- | ------------------ | ------------------- |
+| GET    | `/api/tasks`     | Get all tasks     | None               | Array of tasks      |
+| POST   | `/api/tasks`     | Create a new task | `{ text: string }` | Created task object |
+| PUT    | `/api/tasks/:id` | Update a task     | `{ text: string }` | Updated task object |
+| DELETE | `/api/tasks/:id` | Delete a task     | None               | Status message      |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Task Object Schema
+{
+  "_id": "string",
+  "text": "string",
+  "completed": "boolean"
+}
 
-### `npm run build` fails to minify
+## Folder Structure
+your_repo_name/
+├── public/
+├── src/
+│   ├── App.jsx         # Main React component
+│   ├── index.js        # React entry point
+│   └── ...             # Other components/styles if any
+├── .env                # Environment variables
+├── package.json
+├── README.md
+└── ...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Licence
+This project is licensed under the MIT License.
