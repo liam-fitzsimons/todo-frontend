@@ -23,7 +23,7 @@ Use this link for a demo: https://todo-frontend-theta-bice.vercel.app/
    cd your-frontend-repo
    
 2. Create a .env file in the project root and add your backend API URL:
-bash
+```bash
 REACT_APP_API_URL=http://localhost:5000/api/tasks
 
 
