@@ -18,11 +18,11 @@ Use this link for a demo: https://todo-frontend-theta-bice.vercel.app/
 
 1. Clone this repository:
 
-   ```git clone https://github.com/yourusername/your-frontend-repo.git
-   cd your-frontend-repo```
+git clone https://github.com/yourusername/your-frontend-repo.git
+   cd your-frontend-repo
    
 2. Create a .env file in the project root and add your backend API URL:
-```REACT_APP_API_URL=http://localhost:5000/api/tasks```
+bash```REACT_APP_API_URL=http://localhost:5000/api/tasks
 
 
 4. Install the project dependencies:
